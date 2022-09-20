@@ -6,17 +6,22 @@ public class Usuario {
     private String apellidoPaterno;
     private String apellidoMaterno;
     private String email;
+    private String foto;
 
-    public Usuario(int id, String nombre, String apellidoPaterno, String apellidoMaterno, String email) {
+    public Usuario(int id, String nombre, String apellidoPaterno, String apellidoMaterno, String email, String foto) {
         this.id = id;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.email = email;
+        this.foto = foto;
     }
 
     public Usuario(int id) {
         this.id = id;
+    }
+
+    public Usuario(int i, String nombre, String apellido_p, String apellido_m, String s) {
     }
 
     public int getId() {
@@ -59,6 +64,14 @@ public class Usuario {
         this.email = email;
     }
 
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -67,6 +80,7 @@ public class Usuario {
                 ", apellidoPaterno='" + apellidoPaterno + '\'' +
                 ", apellidoMaterno='" + apellidoMaterno + '\'' +
                 ", email='" + email + '\'' +
+                ", foto='" + foto + '\'' +
                 '}';
     }
 }
